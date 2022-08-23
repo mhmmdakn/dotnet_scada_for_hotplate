@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="HotPlate.UserControls.BtnTik"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" Width="42">
+    <Grid MouseUp="Grid_MouseUp">
+        <Rectangle Margin="9,21,0,-2" Stroke="LightSlateGray" StrokeThickness="1" RenderTransformOrigin="0.5,0.5" RadiusX="7" RadiusY="5" Fill="LightSlateGray" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="10">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-38.486"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Height="52" Margin="24,-1,0,-1" Stroke="LightSlateGray" StrokeThickness="1" Fill="LightSlateGray" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" RadiusX="7" RadiusY="5" HorizontalAlignment="Left" Width="10">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,21 @@
+Data_Cikis.Jog_Kum_Cek_FW;%DB1.DBX18.0;Bool
+Data_Cikis.Jog_Kum_Cek_RV;%DB1.DBX18.1;Bool
+Data_Cikis.Man_Menzel_FW;%DB1.DBX0.0;Bool
+Data_Cikis.Man_Menzel_RV;%DB1.DBX0.1;Bool
+Data_Cikis.Man_Sag_Kesici;%DB1.DBX0.2;Bool
+Data_Cikis.Man_Sol_Kesici;%DB1.DBX0.3;Bool
+Data_Cikis.Scm_Menzel_Yon;%DB1.DBX0.4;Bool
+Data_Cikis.Scm_Sag_Kesici;%DB1.DBX0.5;Bool
+Data_Cikis.Scm_Sol_Kesici;%DB1.DBX0.6;Bool
+Data_Cikis.Jog_Kum_Cek_Velocity;%DB1.DBD20;Floating-point number
+Data_Cikis.Kum_Cek_Cal_mm;%DB1.DBD2;Floating-point number
+Data_Cikis.Kum_Cek_Cal_Velocity;%DB1.DBD6;Floating-point number
+Giden_veri.Fault_Menzel;%DB35.DBX0.0;Bool
+Menzel_FW;%Q0.5;Bool
+Menzel_RV;%Q0.6;Bool
+Sag_Kesici_Motor;%Q1.0;Bool
+Sol_kesici_Motor;%Q1.1;Bool
+Status.Servo_Dir_FW;%DB18.DBX0.0;Bool
+Status.Servo_Dir_RV;%DB18.DBX0.1;Bool
+Loop_Alt_Limit;%I0.6;Bool
+Loop_Ust_Limit;%I0.7;Bool

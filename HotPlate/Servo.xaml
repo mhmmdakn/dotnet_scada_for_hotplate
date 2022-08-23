@@ -1,0 +1,87 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotPlate"
+      xmlns:UserControls="clr-namespace:HotPlate.UserControls" x:Class="HotPlate.Servo"
+      mc:Ignorable="d" 
+      d:DesignHeight="934" d:DesignWidth="1280"
+      Title="Servo" Background="#FF343131" Loaded="Page_Loaded" Unloaded="Page_Unloaded">
+
+    <Grid>
+
+
+        <UserControls:StateServo HorizontalAlignment="Left" Height="187" Margin="651,348,0,0" VerticalAlignment="Top" Width="410" ServoNum="3" State="True" MouseUp="StateServo_MouseUp"/>
+        <UserControls:StateServo HorizontalAlignment="Left" Height="187" Margin="651,586,0,0" VerticalAlignment="Top" Width="410" RenderTransformOrigin="0.5,0.5" FlipYAxis="True" ServoNum="4" MouseUp="StateServo_MouseUp">
+            <UserControls:StateServo.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:StateServo.RenderTransform>
+        </UserControls:StateServo>
+        <UserControls:StateServo  HorizontalAlignment="Left" Margin="222,348,0,0" Width="410" RenderTransformOrigin="0.5,0.5" FlipXAxis="True" Height="186" VerticalAlignment="Top" ServoNum="1" Loaded="StateServo_Loaded" MouseUp="StateServo_MouseUp">
+            <UserControls:StateServo.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:StateServo.RenderTransform>
+        </UserControls:StateServo>
+        <UserControls:StateServo HorizontalAlignment="Left" Height="186" Margin="220,586,0,0" VerticalAlignment="Top" Width="410" RenderTransformOrigin="0.5,0.5" FlipXAxis="True" FlipYAxis="True" ServoNum="2" MouseUp="StateServo_MouseUp">
+            <UserControls:StateServo.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:StateServo.RenderTransform>
+        </UserControls:StateServo>
+        <local:BtnBeforePage HorizontalAlignment="Left" Height="50" Margin="39,444,0,0" VerticalAlignment="Top" Width="30" MouseUp="BtnBeforePage_MouseUp">
+            <local:BtnBeforePage.Effect>
+                <DropShadowEffect/>
+            </local:BtnBeforePage.Effect>
+        </local:BtnBeforePage>
+        <local:BtnAfterPage Height="50" Margin="1211,444,39,0" VerticalAlignment="Top" MouseUp="BtnAfterPage_MouseUp">
+            <local:BtnAfterPage.Effect>
+                <DropShadowEffect/>
+            </local:BtnAfterPage.Effect>
+        </local:BtnAfterPage>
+        <TextBlock HorizontalAlignment="Left" Margin="1194,499,0,0" TextWrapping="Wrap" Text="Giriş Ünitesi" VerticalAlignment="Top" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,499,0,0" TextWrapping="Wrap" Text="Ana Ünite Pres" VerticalAlignment="Top" TextAlignment="Center" Width="40" Foreground="White"/>
+        <local:StateLed HorizontalAlignment="Left" Height="70" Margin="606,80,0,0" VerticalAlignment="Top" Width="70"  PLCReadAdress="JD640_KINCO_SAFETY_OK" DataType="UInt16" FalseColor="Red" ForceCursor="True" TrueColor="Lime"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="271,202,0,0" VerticalAlignment="Top" Width="50"  DataType="UInt16" PLCReadAdress="JD640_Ready_OK" TrueColor="Lime" FalseColor="Red"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="386,202,0,0" VerticalAlignment="Top" Width="50"  DataType="UInt16" PLCReadAdress="JD640_SET_OK" TrueColor="Lime" FalseColor="Red"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="501,202,0,0" VerticalAlignment="Top" Width="50"  PLCReadAdress="JD640_Enable_OK" TrueColor="Lime" FalseColor="Red"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="616,202,0,0" VerticalAlignment="Top" Width="50"  PLCReadAdress="JD640_POSREACHED_OK" TrueColor="Lime" FalseColor="Red"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="731,202,0,0" VerticalAlignment="Top" Width="50"  PLCReadAdress="JD640_CURRENT_OK" TrueColor="Lime" FalseColor="Red"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="847,202,0,0" VerticalAlignment="Top" Width="50"  PLCReadAdress="JD640_POS_OK" FalseColor="Red" TrueColor="Lime"/>
+        <local:StateLed HorizontalAlignment="Left" Height="50" Margin="961,202,0,0" VerticalAlignment="Top" Width="50"  RenderTransformOrigin="0.5,0.5" PLCReadAdress="First_Home_OK" TrueColor="Lime" FalseColor="Red"/>
+        <TextBlock HorizontalAlignment="Left" Margin="271,264,0,0" TextWrapping="Wrap" Text="Hazır" VerticalAlignment="Top" Width="50" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="377,264,0,0" TextWrapping="Wrap" Text="Set Durum" VerticalAlignment="Top" Width="68" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="501,264,0,0" TextWrapping="Wrap" Text="Enable" VerticalAlignment="Top" Width="50" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="594,264,0,0" TextWrapping="Wrap" Text="Pozisyona Ulaştı" VerticalAlignment="Top" Width="95" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="731,264,0,0" TextWrapping="Wrap" Text="Akım" VerticalAlignment="Top" Width="50" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="831,264,0,0" TextWrapping="Wrap" Text="Pres Dengede" VerticalAlignment="Top" Width="83" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="961,264,0,0" TextWrapping="Wrap" Text="Referans" VerticalAlignment="Top" Width="50" FontWeight="Bold" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="589,162,0,0" TextWrapping="Wrap" Text="Genel Durum" VerticalAlignment="Top" Width="104" FontWeight="Bold" TextAlignment="Center" FontSize="16" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="985,593,0,0" TextWrapping="Wrap" Text="Linner Cetvel 3-4" VerticalAlignment="Top" Foreground="White" FontFamily="BankGothic Lt BT" FontSize="20" TextAlignment="Center" Width="218" Height="21"/>
+        <TextBlock HorizontalAlignment="Left" Margin="81,593,0,0" TextWrapping="Wrap" Text="Linner Cetvel 1-2" VerticalAlignment="Top" Foreground="White" FontFamily="BankGothic Lt BT" FontSize="20" TextAlignment="Center" Width="218" Height="21"/>
+        <local:DegerGir_Digital HorizontalAlignment="Left" Height="76" Margin="111,506,0,0" VerticalAlignment="Top" Width="154" FontSize="24" TextSize="40" PLCReadAdress="JD640.Lineer_Cetvel1" Kazanc="1" TypeCode="Single" DataType="Single"/>
+        <local:DegerGir_Digital Height="76" Margin="1015,506,111,0" VerticalAlignment="Top" Width="Auto" FontSize="24" TextSize="40" PLCReadAdress="JD640.Lineer_Cetvel2" OverridesDefaultStyle="True" Kazanc="1" TypeCode="Single" DataType="Single"/>
+
+        <Grid x:Name="grid_error">
+            <UserControls:Servo_Error_List Visibility="Hidden" HorizontalAlignment="Left" Height="388" Margin="842,59,0,0" VerticalAlignment="Top" Width="347" ServoNum="3" Title="SERVO 3"/>
+            <UserControls:Servo_Error_List Visibility="Hidden" HorizontalAlignment="Left" Height="388" Margin="842,506,0,0" VerticalAlignment="Top" Width="347" ServoNum="4" Title="SERVO 4"/>
+            <UserControls:Servo_Error_List Visibility="Hidden" HorizontalAlignment="Left" Height="388" Margin="93,59,0,0" VerticalAlignment="Top" Width="347" ServoNum="1" Title="SERVO 1"/>
+            <UserControls:Servo_Error_List Visibility="Hidden" HorizontalAlignment="Left" Height="388" Margin="93,506,0,0" VerticalAlignment="Top" Width="347" ServoNum="2" Title="SERVO 2"/>
+
+        </Grid>
+       </Grid>
+</Page>

@@ -1,0 +1,29 @@
+﻿<y:PLC_BaseUserControl x:Class="HotPlate.UserControls.StateOkxaml"
+             xmlns:y="clr-namespace:Hot_Plate_Lib;assembly=Hot_Plate_Lib"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             mc:Ignorable="d" d:DesignWidth="100" Height="100">
+    <Viewbox>
+        <Canvas x:Name="Layer_1" Width="96" Height="91" Canvas.Left="0" Canvas.Top="0">
+            <Path Width="87.958" Height="47.178" Canvas.Left="-0.18" Canvas.Top="44.28" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 85.481,46.0001L 11.3164,45.2801L 0.480001,91.4984L 87.4779,45.9599">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop x:Name="ok_renk1" Color="LimeGreen" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+            <Path Width="85.5555" Height="46.4801" Canvas.Left="2.32548" Canvas.Top="-2.47359e-006" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 87.401,46.0001L 11.2009,45.8401L 2.80548,0.479998L 87.401,46.0001">
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop x:Name="ok_renk2" Color="LimeGreen" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Path.Fill>
+            </Path>
+        </Canvas>
+    </Viewbox>
+</y:PLC_BaseUserControl>

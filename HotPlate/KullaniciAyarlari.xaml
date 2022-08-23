@@ -1,0 +1,41 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotPlate"
+      xmlns:UserControls="clr-namespace:HotPlate.UserControls" x:Class="HotPlate.KullaniciAyarlari"
+      mc:Ignorable="d" 
+     d:DesignHeight="934" d:DesignWidth="1280"
+      Title="KullaniciAyarlari" Background="#FF343131" Loaded="Page_Loaded">
+
+
+    <Grid Margin="0,1,0,-1">
+        <TextBlock Margin="500,114,499,0" TextWrapping="Wrap" Text="KULLANICI AYARLARI" VerticalAlignment="Top" Foreground="White" FontSize="30" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Grid Background="#FF7A7979"  Margin="114,258,72,112">
+            <PasswordBox x:Name="password_Box1" HorizontalAlignment="Left" Margin="148,288,0,0" VerticalAlignment="Top" Height="43" Width="424" GotKeyboardFocus="PasswordBox_GotKeyboardFocus" LostKeyboardFocus="PasswordBox_LostKeyboardFocus" FontSize="24" PasswordChanged="password_Box1_PasswordChanged"/>
+            <TextBlock HorizontalAlignment="Left" Margin="148,229,0,0" TextWrapping="Wrap" Text="Yeni Şifre" VerticalAlignment="Top" Height="34" Width="236" FontWeight="Bold" FontSize="20" Foreground="White" RenderTransformOrigin="0.449,0.426"/>
+            <PasswordBox x:Name="password_Box2" HorizontalAlignment="Left" Margin="148,451,0,0" VerticalAlignment="Top" Height="44" Width="424" PasswordChanged="password_Box2_PasswordChanged" GotKeyboardFocus="PasswordBox_GotKeyboardFocus" LostKeyboardFocus="PasswordBox_LostKeyboardFocus" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="148,396,0,0" TextWrapping="Wrap" Text="Yeni Şifre Tekrar" VerticalAlignment="Top" Height="34" Width="236" FontWeight="Bold" FontSize="20" Foreground="White" RenderTransformOrigin="0.449,0.426"/>
+            <ComboBox x:Name="cmb_KullanciAdi" HorizontalAlignment="Left" Margin="148,118,0,0"  Width="424" Height="54" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.716,4.656" VerticalAlignment="Top" SelectionChanged="cmb_KullaniciAdi_SelectionChanged" />
+            <TextBlock HorizontalAlignment="Left" Margin="148,58,0,0" TextWrapping="Wrap" Text="Kullanıcı Adı" VerticalAlignment="Top" Height="34" Width="236" FontWeight="Bold" FontSize="20" Foreground="White" RenderTransformOrigin="0.676,0.147"/>
+            <UserControls:Numarator_Flex x:Name="numarator1" HorizontalAlignment="Left" Height="409" Margin="675,76,0,0" VerticalAlignment="Top" Width="321" Background="#FF2E2B2B" _OK="numarator1__OK"/>
+        </Grid>
+        <local:BtnBeforePage HorizontalAlignment="Left" Height="50" Margin="39,444,0,0" VerticalAlignment="Top" Width="30" MouseUp="BtnBeforePage_MouseUp">
+            <local:BtnBeforePage.Effect>
+                <DropShadowEffect/>
+            </local:BtnBeforePage.Effect>
+        </local:BtnBeforePage>
+        <TextBlock HorizontalAlignment="Left" Margin="26,499,0,0" TextWrapping="Wrap" Text="Makine Ayarları" VerticalAlignment="Top" TextAlignment="Center" Width="56" Foreground="White"/>
+
+    </Grid>
+</Page>

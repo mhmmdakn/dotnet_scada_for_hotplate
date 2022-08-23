@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotPlate", "HotPlate\HotPlate.csproj", "{7CD7A448-19C1-41B5-A81D-311C92F00274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hot_Plate_Lib", "Hot_Plate_Lib\Hot_Plate_Lib.csproj", "{4EE9D996-E980-425F-9757-E5508D3C2D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Lib", "SQL_Lib\SQL_Lib.csproj", "{CE0E2E99-61B5-490F-BF7D-F018A05601F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfView", "Live_Chart_WpfView\WpfView.csproj", "{4D253423-AE05-47F6-A59D-9162EC0BB1F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live_Chart_Core40", "Live_Chart_Core40\Live_Chart_Core40.csproj", "{F261C3D7-6194-4625-9516-044081B06028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnScreenKeyboard", "OnScreenKeyboard\OnScreenKeyboard.csproj", "{9769A070-B7DC-4289-AE71-F810D84660CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD7A448-19C1-41B5-A81D-311C92F00274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD7A448-19C1-41B5-A81D-311C92F00274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD7A448-19C1-41B5-A81D-311C92F00274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD7A448-19C1-41B5-A81D-311C92F00274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EE9D996-E980-425F-9757-E5508D3C2D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE9D996-E980-425F-9757-E5508D3C2D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE9D996-E980-425F-9757-E5508D3C2D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE9D996-E980-425F-9757-E5508D3C2D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0E2E99-61B5-490F-BF7D-F018A05601F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0E2E99-61B5-490F-BF7D-F018A05601F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0E2E99-61B5-490F-BF7D-F018A05601F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0E2E99-61B5-490F-BF7D-F018A05601F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D253423-AE05-47F6-A59D-9162EC0BB1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D253423-AE05-47F6-A59D-9162EC0BB1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D253423-AE05-47F6-A59D-9162EC0BB1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D253423-AE05-47F6-A59D-9162EC0BB1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F261C3D7-6194-4625-9516-044081B06028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F261C3D7-6194-4625-9516-044081B06028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F261C3D7-6194-4625-9516-044081B06028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F261C3D7-6194-4625-9516-044081B06028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9769A070-B7DC-4289-AE71-F810D84660CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9769A070-B7DC-4289-AE71-F810D84660CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9769A070-B7DC-4289-AE71-F810D84660CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9769A070-B7DC-4289-AE71-F810D84660CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F98BAF7E-9F76-4447-A5F9-B3E8A28EC48B}
+	EndGlobalSection
+EndGlobal

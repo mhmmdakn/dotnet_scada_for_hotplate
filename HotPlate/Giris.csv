@@ -1,0 +1,20 @@
+Data_Giris.Jog_Kum_Cek_FW;%DB12.DBX0.0;Bool
+Data_Giris.Jog_Kum_Cek_RV;%DB12.DBX0.1;Bool
+Data_Giris.Man_Ortalayici_FW;%DB12.DBX0.2;Bool
+Data_Giris.Man_Ortalayici_RV;%DB12.DBX0.3;Bool
+Data_Giris.Man_Dok_Coz_Motor_FW;%DB12.DBX0.4;Bool
+Data_Giris.Man_Dok_Coz_Motor_RV;%DB12.DBX0.5;Bool
+Data_Giris.Scm_Dok_Coz_Motor_Yon;%DB12.DBX0.6;Bool
+Data_Giris.Jog_Kum_Cek_Velocity;%DB12.DBD2;Floating-point number
+Data_Giris.Kum_Cek_Cal_mm;%DB12.DBD6;Floating-point number
+Data_Giris.Kum_Cek_Cal_Velocity;%DB12.DBD10;Floating-point number
+Dok_Coz_Motoru_FW;%Q0.7;Bool
+Dok_Coz_Motoru_RV;%Q1.0;Bool
+Ortalayici_FW;%Q0.4;Bool
+Ortalayici_RV;%Q0.3;Bool
+Status.Servo_Dir_FW;%DB1.DBX0.0;Bool
+Status.Servo_Dir_RV;%DB1.DBX0.1;Bool
+Ortalayici_Up;%Q0.5;Bool
+Ortalayici_Down;%Q0.6;Bool
+Loop_Alt_Limit;%I1.3;Bool
+Loop_Ust_Limit;%I1.5;Bool

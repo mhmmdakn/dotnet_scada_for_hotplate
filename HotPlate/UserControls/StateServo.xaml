@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="HotPlate.UserControls.StateServo"             
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             xmlns:HotPlate="clr-namespace:HotPlate" 
+             mc:Ignorable="d" 
+             d:DesignHeight="260" Width="410">
+    <Grid x:Name="BaseGrid"  Loaded="BaseGrid_Loaded" Height="260" VerticalAlignment="Top" Unloaded="BaseGrid_Unloaded">
+        <Line X1="154" Y1="80" X2="200" Y2="25" Stroke="SlateGray" StrokeThickness="2"/>
+        <Line X1="200" Y1="3" X2="200" Y2="97" Stroke="SlateGray" StrokeThickness="2"/>
+        <Viewbox x:Name="servo" Margin="50,82,0,79" HorizontalAlignment="Left" Width="100" RenderTransformOrigin="0.5,0.5">
+            <Canvas x:Name="Layer_1" Width="95.9999" Height="95.9999" Canvas.Left="0" Canvas.Top="0">
+                <Path Width="96.9599" Height="96.9599" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 16.8,0.480001L 80.1599,0.480001C 89.1731,0.480001 96.4799,7.78671 96.4799,16.8L 96.4799,80.1599C 96.4799,89.1731 89.1731,96.4799 80.1599,96.4799L 16.8,96.4799C 7.78671,96.4799 0.480001,89.1731 0.480001,80.1599L 0.480001,16.8C 0.480001,7.78671 7.78671,0.480001 16.8,0.480001 Z " Fill="LightGray"/>
+                <Ellipse Width="83" Height="83" Canvas.Left="7" Canvas.Top="7" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="LightGray" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Width="53.76" Height="53.7215" Canvas.Left="22.1" Canvas.Top="21.9991" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="LightGray" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Path Width="11.9518" Height="11.9518" Canvas.Left="57.8641" Canvas.Top="28.584" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 63.84,29.8081L 68.5918,34.5599C 69.9039,35.872 69.9039,37.9995 68.5918,39.3116L 68.5918,39.3116C 67.2796,40.6238 65.1522,40.6238 63.84,39.3116L 59.0882,34.5599C 57.7761,33.2477 57.7761,31.1203 59.0882,29.8081L 59.0882,29.8081C 60.4004,28.4959 62.5278,28.4959 63.84,29.8081 Z " Fill="#FFB6B5B5"/>
+                <Path Width="7.2" Height="13.92" Canvas.Left="64.56" Canvas.Top="43.4399" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 64.8,53.7599L 64.8,47.0399C 64.8,45.1842 66.3043,43.6799 68.16,43.6799L 68.16,43.6799C 70.0157,43.6799 71.52,45.1842 71.52,47.0399L 71.52,53.7599C 71.52,55.6155 70.0157,57.1199 68.16,57.1199L 68.16,57.1199C 66.3043,57.1199 64.8,55.6155 64.8,53.7599 Z " Fill="#FFB6B5B5"/>
+                <Path Width="7.2" Height="13.92" Canvas.Left="25.2" Canvas.Top="42.5199" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 25.44,52.8399L 25.44,46.1199C 25.44,44.2642 26.9443,42.7599 28.8,42.7599L 28.8,42.7599C 30.6557,42.7599 32.16,44.2642 32.16,46.1199L 32.16,52.8399C 32.16,54.6955 30.6557,56.1999 28.8,56.1999L 28.8,56.1999C 26.9443,56.1999 25.44,54.6955 25.44,52.8399 Z " Fill="#FFB6B5B5"/>
+                <Path Width="11.9518" Height="11.9518" Canvas.Left="29.443" Canvas.Top="57.351" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 35.4189,58.5751L 40.1706,63.3268C 41.4828,64.639 41.4828,66.7664 40.1706,68.0786L 40.1706,68.0786C 38.8585,69.3908 36.731,69.3908 35.4189,68.0786L 30.6671,63.3268C 29.3549,62.0147 29.3549,59.8872 30.6671,58.5751L 30.6671,58.5751C 31.9793,57.2629 34.1067,57.2629 35.4189,58.5751 Z " Fill="#FFB6B5B5"/>
+                <Path Width="13.9198" Height="7.19999" Canvas.Left="42.4587" Canvas.Top="65.7272" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 46.0587,65.9672L 52.7785,65.9672C 54.6342,65.9672 56.1385,67.4715 56.1385,69.3272L 56.1385,69.3272C 56.1385,71.1828 54.6342,72.6872 52.7785,72.6872L 46.0587,72.6872C 44.203,72.6872 42.6987,71.1828 42.6987,69.3272L 42.6987,69.3272C 42.6987,67.4715 44.203,65.9672 46.0587,65.9672 Z " Fill="#FFB6B5B5"/>
+                <Path Width="11.9516" Height="11.9516" Canvas.Left="28.4429" Canvas.Top="28.3512" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 29.6671,34.3269L 34.4186,29.5754C 35.7308,28.2632 37.8582,28.2632 39.1704,29.5754L 39.1704,29.5754C 40.4825,30.8875 40.4825,33.0149 39.1704,34.3271L 34.4188,39.0787C 33.1066,40.3908 30.9792,40.3908 29.6671,39.0787L 29.6671,39.0787C 28.3549,37.7665 28.3549,35.6391 29.6671,34.3269 Z " Fill="#FFB6B5B5"/>
+                <Path Width="11.9516" Height="11.9516" Canvas.Left="57.4431" Canvas.Top="58.351" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 58.6672,64.3267L 63.4188,59.5752C 64.7309,58.263 66.8584,58.263 68.1705,59.5752L 68.1705,59.5752C 69.4827,60.8873 69.4827,63.0148 68.1705,64.3269L 63.419,69.0785C 62.1068,70.3907 59.9794,70.3907 58.6672,69.0785L 58.6672,69.0785C 57.355,67.7663 57.355,65.6389 58.6672,64.3267 Z " Fill="#FFB6B5B5"/>
+                <Path Width="13.92" Height="7.19999" Canvas.Left="41.52" Canvas.Top="25.1999" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 45.12,25.4399L 51.84,25.4399C 53.6957,25.4399 55.2,26.9442 55.2,28.7999L 55.2,28.7999C 55.2,30.6555 53.6957,32.1599 51.84,32.1599L 45.12,32.1599C 43.2643,32.1599 41.76,30.6555 41.76,28.7999L 41.76,28.7999C 41.76,26.9442 43.2643,25.4399 45.12,25.4399 Z " Fill="#FFB6B5B5"/>
+                <Path x:Name="servoMil" Width="10.56" Height="7.68001" Canvas.Left="43.3289" Canvas.Top="27.7669" Stretch="Fill" StrokeThickness="0.5" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 43.8089,34.9669L 43.8089,32.0869C 43.8089,29.9662 45.5281,28.2469 47.6489,28.2469L 49.5689,28.2469C 51.6897,28.2469 53.4089,29.9662 53.4089,32.0869L 53.4089,34.9669" RenderTransformOrigin="0.553,2.723">
+                    <Path.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="1,0.5">
+                            <GradientStop Color="#FFACA8A8" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </Path.Fill>
+                </Path>
+                <Ellipse Width="5.76" Height="5.76001" Canvas.Left="3.84" Canvas.Top="18.2799" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Path Width="5.81654" Height="5.76" Canvas.Left="8.27889" Canvas.Top="7.96693" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 11.1589,8.44693C 12.4844,8.44693 13.5589,9.52144 13.5589,10.8469C 13.92,11.9999 12.4844,13.2469 11.1589,13.2469C 9.83341,13.2469 8.75889,12.1724 8.75889,10.8469C 8.75889,9.52144 9.8334,8.44693 11.1589,8.44693 Z " Fill="Black"/>
+                <Ellipse Width="5.76" Height="5.76" Canvas.Left="18.2789" Canvas.Top="2.96693" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Ellipse Width="5.76001" Height="5.76001" Canvas.Left="73.9394" Canvas.Top="88.3434" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Path Width="5.81655" Height="5.76001" Canvas.Left="84.3783" Canvas.Top="84.0305" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 87.2583,84.5105C 88.5838,84.5105 89.6583,85.585 89.6583,86.9105C 90.0194,88.0634 88.5838,89.3105 87.2583,89.3105C 85.9328,89.3105 84.8583,88.2359 84.8583,86.9105C 84.8583,85.585 85.9328,84.5105 87.2583,84.5105 Z " Fill="Black"/>
+                <Ellipse Width="5.76002" Height="5.76" Canvas.Left="88.3783" Canvas.Top="73.0305" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Ellipse Width="5.76001" Height="5.76001" Canvas.Left="88.04" Canvas.Top="18.1928" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Path Width="5.81655" Height="5.76" Canvas.Left="83.8789" Canvas.Top="7.87986" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 86.7589,8.35986C 88.0844,8.35986 89.1589,9.43438 89.1589,10.7599C 89.52,11.9128 88.0844,13.1599 86.7589,13.1599C 85.4334,13.1599 84.3589,12.0853 84.3589,10.7599C 84.3589,9.43438 85.4334,8.35986 86.7589,8.35986 Z " Fill="Black"/>
+                <Ellipse Width="5.76" Height="5.76" Canvas.Left="72.8789" Canvas.Top="2.97984" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Ellipse Width="5.76" Height="5.76001" Canvas.Left="19.1611" Canvas.Top="88.2328" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Path Width="5.81654" Height="5.76001" Canvas.Left="8.6" Canvas.Top="84.9199" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 11.48,85.3999C 12.8055,85.3999 13.88,86.4744 13.88,87.7999C 14.2411,88.9528 12.8055,90.1999 11.48,90.1999C 10.1545,90.1999 9.08,89.1253 9.08,87.7999C 9.08,86.4744 10.1545,85.3999 11.48,85.3999 Z " Fill="Black"/>
+                <Ellipse Width="5.76" Height="5.76" Canvas.Left="3.6" Canvas.Top="73.9199" Stretch="Fill" StrokeThickness="0.960002" StrokeLineJoin="Round" Stroke="#FF000000" Fill="Black"/>
+                <Path Width="24.48" Height="11.8208" Canvas.Left="36.24" Canvas.Top="9.05909" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 59.5531,9.29909C 60.1442,10.3873 60.48,11.6344 60.48,12.9598L 60.48,12.9598C 60.48,17.2014 57.0416,20.6398 52.8,20.6398L 44.16,20.6398C 39.9185,20.6398 36.48,17.2014 36.48,12.9598L 36.48,12.9598C 36.48,11.6344 36.8158,10.3873 37.4069,9.29909" />
+                <Path Width="24.48" Height="11.6168" Canvas.Left="38.1791" Canvas.Top="77.0399" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 39.2392,88.4167C 38.7146,87.3777 38.4191,86.2033 38.4191,84.9599L 38.4191,84.9599C 38.4191,80.7183 41.8575,77.2799 46.0991,77.2799L 54.7391,77.2799C 58.9806,77.2799 62.4191,80.7183 62.4191,84.9599L 62.4191,84.9599C 62.4191,85.7551 62.2982,86.5222 62.0738,87.2437"/>
+                <Path Width="10.89" Height="24.482" Canvas.Left="8.092" Canvas.Top="38.14" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 9.0106,37.9304C 9.92943,37.5418 10.9396,37.3269 12,37.3269L 12,37.3269C 16.2415,37.3269 19.68,40.7654 19.68,45.0069L 19.68,53.6469C 19.68,57.8884 16.2415,61.3269 12,61.3269L 12,61.3269C 11.2047,61.3269 10.4377,61.206 9.7162,60.9816"/>
+                <Path Width="9.94308" Height="24.48" Canvas.Left="78" Canvas.Top="37.0873" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 87.2709,61.2089C 86.8324,61.2867 86.3809,61.3273 85.92,61.3273L 85.92,61.3273C 81.6784,61.3273 78.24,57.8889 78.24,53.6473L 78.24,45.0073C 78.24,40.7658 81.6784,37.3273 85.92,37.3273L 85.92,37.3273C 86.5338,37.3273 87.1309,37.3993 87.7031,37.5354"/>
+                <Path Width="21.3854" Height="21.6313" Canvas.Left="12.3226" Canvas.Top="12.9845" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 27.977,13.2245C 29.1639,13.5759 30.2827,14.22 31.2195,15.1568L 31.2195,15.1568C 34.2175,18.1547 34.2175,23.0154 31.2195,26.0133L 25.1055,32.1274C 22.1075,35.1253 17.2469,35.1253 14.249,32.1274L 14.249,32.1274C 13.4995,31.3779 12.9374,30.512 12.5626,29.5879"/>
+                <Path Width="21.952" Height="22.12" Canvas.Left="64.048" Canvas.Top="62" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 69.4731,83.4985C 68.549,83.1237 67.6831,82.5616 66.9336,81.8121L 66.9336,81.8121C 63.9357,78.8142 63.9356,73.9536 66.9336,70.9556L 73.0477,64.8416C 76.0456,61.8436 80.9062,61.8436 83.9042,64.8416L 83.9042,64.8416C 84.382,65.3194 84.7837,65.8447 85.1093,66.4021"/>
+                <Path Width="21.952" Height="22.105" Canvas.Left="63" Canvas.Top="12.28" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 84.3837,29.7371C 84.0198,30.4868 83.5265,31.1896 82.9041,31.812L 82.9041,31.812C 79.9062,34.81 75.0456,34.81 72.0477,31.812L 65.9335,25.6979C 62.9356,22.7 62.9356,17.8394 65.9335,14.8415L 65.9335,14.8415C 66.683,14.092 67.5489,13.5299 68.473,13.1551"/>
+                <Path Width="22.806" Height="22" Canvas.Left="13.037" Canvas.Top="64" Stretch="Fill" StrokeThickness="0.48" StrokeLineJoin="Round" Stroke="#FF000000" Data="F1 M 13.9471,70.2765C 14.2841,69.0182 14.9463,67.8288 15.9336,66.8415L 15.9336,66.8415C 18.9315,63.8436 23.7921,63.8436 26.79,66.8415L 32.9042,72.9557C 35.9021,75.9536 35.9021,80.8142 32.9042,83.8121L 32.9042,83.8121C 32.2401,84.4762 31.4846,84.9932 30.6783,85.363"/>
+                <Ellipse x:Name="servoMil2" Width="29.76" Height="29.76" Canvas.Left="33.66" Canvas.Top="33.9599" Stretch="Fill" StrokeThickness="0.5" StrokeLineJoin="Round" Stroke="#FF000000" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="1,0.5">
+                            <GradientStop Color="#FFACA8A8" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Width="4" Height="4" Canvas.Left="47" Canvas.Top="47" Stretch="Fill" StrokeThickness="0" StrokeLineJoin="Round" Stroke="#FF000000">
+                    <Ellipse.Fill>
+                        <RadialGradientBrush>
+                            <GradientStop Color="Black" Offset="1"/>
+                            <GradientStop Color="#FFFFF8F8"/>
+                        </RadialGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Canvas>
+        </Viewbox>
+
+        <Grid x:Name="info_servo" Height="97" Width="195" Margin="205,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" Height="13" TextAlignment="Center" Text="AKIM"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" Text="POZİSYON" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,54,0,0" TextWrapping="Wrap" Text="HEDEF FARKI" VerticalAlignment="Top" Width="95" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" TextAlignment="Center"/>
+            <TextBlock x:Name="sta_Genel" HorizontalAlignment="Left" Margin="0,73,0,0" TextWrapping="Wrap" Text="HAZIR" Width="195" Background="#FF00CF00" Foreground="White" TextAlignment="Center" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Top"/>
+            <TextBlock x:Name="txt_Speed" HorizontalAlignment="Left" Margin="101,18,0,0" TextWrapping="Wrap" Text="920rpm" VerticalAlignment="Top" Width="94" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock x:Name="txt_I_q" HorizontalAlignment="Left" Margin="100,0,0,0" TextWrapping="Wrap" Text="12.0A" VerticalAlignment="Top" Width="95" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="13"/>
+            <TextBlock x:Name="txt_Pos_Error" HorizontalAlignment="Left" Margin="101,55,0,0" TextWrapping="Wrap" Text="0.3mm" VerticalAlignment="Top" Width="94" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="13"/>
+            <TextBlock HorizontalAlignment="Left" Margin="0,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" Text="HIZ" TextAlignment="Center"/>
+            <TextBlock x:Name="txt_Pos_Actual" HorizontalAlignment="Left" Margin="101,36,0,0" TextWrapping="Wrap" Text="123.35mm" VerticalAlignment="Top" Width="94" Background="LightSlateGray" Foreground="#FFFFF4F4" FontFamily="BankGothic Lt BT" TextAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+        </Grid>
+        <Grid x:Name="status_servo" RenderTransformOrigin="0.5,0.5" Margin="0,72,210,67">
+
+            <HotPlate:StateLed_I x:Name="sta_Enable"  Height="20" Width="20"   TrueColor="#FF00F3FF" State="True" Margin="15,10,165,91"/>
+            <HotPlate:StateLed_I x:Name="sta_Ready" Height="20" Width="20"   TrueColor="Lime" State="True" Margin="15,91,165,10"/>            
+            <HotPlate:StateLed_I x:Name="sta_Error" Height="20"   Width="20" TrueColor="Red" State="True" Margin="165,10,15,91" />
+            <HotPlate:StateLed_I x:Name="sta_PosReached" Height="20"   Width="20" TrueColor="#FFE6FF00" State="True" Margin="165,91,15,10"/>
+
+            <TextBlock Margin="15,30,165,78" TextWrapping="Wrap" Text="EN" Foreground="#FFCBCBCB" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.583,0.228" TextAlignment="Center"/>
+
+            <TextBlock Margin="15,78,165,30" TextWrapping="Wrap" Text="RD" Foreground="#FFCBCBCB" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" TextAlignment="Center"/>
+
+            <TextBlock HorizontalAlignment="Right" Margin="0,0,15,78" TextWrapping="Wrap" Text="ER" VerticalAlignment="Bottom" Width="20" Foreground="#FFCBCBCB" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" TextAlignment="Center"/>
+
+
+            <TextBlock Margin="165,78,15,30" TextWrapping="Wrap" Text="PR" Foreground="#FFCBCBCB" FontFamily="BankGothic Lt BT" RenderTransformOrigin="0.5,0.5" TextAlignment="Center"/>
+
+
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>

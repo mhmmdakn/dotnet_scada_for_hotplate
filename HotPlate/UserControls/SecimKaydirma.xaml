@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="HotPlate.UserControls.SecimKaydirma"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" Width="67.667">
+    <Grid>
+        <Rectangle x:Name="kaydirma" Fill="LightGray" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="68" RadiusX="14" RadiusY="18" MouseUp="Grid_MouseUp"/>
+        <Ellipse x:Name="kaydirma2" Width="28" Fill="White" Margin="2,1,38,0" Height="28" VerticalAlignment="Top" MouseUp="Grid_MouseUp"/>
+        <Ellipse x:Name="kaydirma3" Width="28" Fill="White" Margin="38,1,2,0" Height="28" VerticalAlignment="Top" Visibility="Hidden" MouseUp="Grid_MouseUp"/>
+    </Grid>
+</UserControl>

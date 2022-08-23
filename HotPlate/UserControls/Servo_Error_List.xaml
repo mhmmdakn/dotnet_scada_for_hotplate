@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="HotPlate.UserControls.Servo_Error_List"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" Width="342" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid Background="LightGray">
+        <ListBox x:Name="lst_Error_State_1"  HorizontalAlignment="Left" Height="334" Margin="10,44,0,0" VerticalAlignment="Top" Width="160" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Extended">
+            <local:Error_List_Item Height="16" Width="144" Text="Extended Error"/>
+            <local:Error_List_Item Height="16" Width="150" Text="Encoder ABZ or Not Connected"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Encoder UVW"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Encoder Counting"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Driver Temperature"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Over Voltage"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Under Voltage"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Over Current"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Chop Resistor"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Following Error"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Low Logic Voltage" FontSize="10"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Motor or Driver IIt"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Over Frequency"/>
+            <local:Error_List_Item Height="16" Width="144" Text="Motor Temperature" VerticalContentAlignment="Center"/>
+            <local:Error_List_Item Height="16" Width="150" Text="Motor Commutation or Encoder"/>
+            <local:Error_List_Item Height="16" Width="144" Text="EEPROM data"/>
+        </ListBox>
+        <ListBox x:Name="lst_Error_State_2" HorizontalAlignment="Left" Height="334" Margin="175,44,0,0" VerticalAlignment="Top" Width="160" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="Extended">
+            <local:Error_List_Item Height="16" Width="139" Text="Current Sensor"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Watch Dog"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Wrong Interrupt"/>
+            <local:Error_List_Item Height="16" Width="139" Text="MCU ID"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Motor Configuration"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Logic Output"/>
+            <local:Error_List_Item Height="16" Width="139" Text="STO1 Error"/>
+            <local:Error_List_Item Height="16" Width="139" Text="STO2 Error"/>
+            <local:Error_List_Item Height="16" Width="139" Text="External Enable"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Positive Limit"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Negative Limit"/>
+            <local:Error_List_Item Height="16" Width="139" Text="SPI Internal"/>
+            <local:Error_List_Item Height="16" Width="139" Text="CAN Abort Connetion"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Closed Loop Direction"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Master ABZ"/>
+            <local:Error_List_Item Height="16" Width="139" Text="Master Counting"/>
+        </ListBox>
+        <Label x:Name="lbl_Title" Content="SERVO 1" HorizontalAlignment="Left" Margin="0,2,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Width="342" HorizontalContentAlignment="Center"/>
+    </Grid>
+</UserControl>

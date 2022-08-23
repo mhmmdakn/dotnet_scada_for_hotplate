@@ -1,0 +1,72 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotPlate"
+      xmlns:UserControls="clr-namespace:HotPlate.UserControls" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="HotPlate.Plate"
+      mc:Ignorable="d" 
+      d:DesignHeight="934" d:DesignWidth="1280"
+      Title="LineerCetvel" Background="#FF343131" Loaded="Page_Loaded">
+
+    <Grid>
+        <local:BtnBeforePage HorizontalAlignment="Left" Height="50" Margin="39,444,0,0" VerticalAlignment="Top" Width="30" MouseUp="BtnBeforePage_MouseUp">
+            <local:BtnBeforePage.Effect>
+                <DropShadowEffect/>
+            </local:BtnBeforePage.Effect>
+        </local:BtnBeforePage>
+        <local:BtnAfterPage Height="50" Margin="1211,444,39,0" VerticalAlignment="Top" MouseUp="BtnAfterPage_MouseUp">
+            <local:BtnAfterPage.Effect>
+                <DropShadowEffect/>
+            </local:BtnAfterPage.Effect>
+        </local:BtnAfterPage>
+        <TextBlock HorizontalAlignment="Left" Margin="1211,499,0,0" TextWrapping="Wrap" Text="Servo" VerticalAlignment="Top" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,499,0,0" TextWrapping="Wrap" Text="Rezistans" VerticalAlignment="Top" TextAlignment="Center" Width="56" Foreground="White"/>
+        <local:StateImage HorizontalAlignment="Left" Height="428" Margin="371,71,0,0" VerticalAlignment="Top" Width="545" Foreground="#FFFF7F00" MultiState="0" PLCReadAdress="STATUS.Pres_Din_Pos" PLCWriteAdress="">
+            <local:StateImage.ListImage>
+                <Image Source="img/HotPlate-Home.png"/>
+                <Image Source="img/HotPlate-Donus.png"/>
+                <Image Source="img/HotPlate-Basma.png"/>
+                <Image Source="img/HotPlate-Kalip.png"/>
+            </local:StateImage.ListImage>
+            <local:StateImage.ListText>
+                <TextBlock Text="SIFIR POZİSYONU" Foreground="#FFFF7F00" FontSize="16" Margin="60"/>
+                <TextBlock Text="DÖNÜŞ POZİSYONU" Foreground="#FFFF7F00" FontSize="16" Margin="60"/>
+                <TextBlock Text="BASKI POZİSYONU" Foreground="#FFFF7F00" FontSize="16" Margin="60"/>
+                <TextBlock Text="KALIP POZİSYONU" Foreground="#FFFF7F00" FontSize="16" Margin="60"/>
+            </local:StateImage.ListText>
+        </local:StateImage>
+        <TextBlock Margin="380,26,381,0" TextWrapping="Wrap" Text="ANA ÜNİTE PRES" VerticalAlignment="Top" Foreground="White" FontSize="30" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center"/>
+        <Grid Background="#FF7A7979"  Margin="86,499,84,49">
+            <local:DegerGir HorizontalAlignment="Left" Height="52" Margin="692,112,0,0" VerticalAlignment="Top" Width="222" Keypad="True" Ust_Limit="100" PLCReadAdress="JD640_Set.Current_Rate" PLCWriteAdress="JD640_Set.Current_Rate" Aciklama="Baskı Gücü (%)" Kazanc="0.01" DataType="Single" MessageBoxState="True" MessageBoxText="Dikkat!!! &quot;Pres Gücü&quot; değerinin set edilebilmesi için makina STOP durumuna getirilecek. Devam etmek istiyor musunuz?" MessgeBoxRunStatus="True" Click="degerGir_Baski_Offset_Click" MessgeBoxWorkMode="2" Recete="True" ParametreAdi="Baski_Gucu" PozitifToleransAdi="Baski_Gucu_PTol" NegatifToleransAdi="Baski_Gucu_NTol"/>
+            <TextBlock HorizontalAlignment="Left" Margin="742,36,0,0" TextWrapping="Wrap" Text="BASKI GÜCÜ (%)" VerticalAlignment="Top" Height="54" Width="124" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+            <local:DegerGir HorizontalAlignment="Left" Height="54" Margin="692,287,0,0" VerticalAlignment="Top" Width="222" PLCReadAdress="JD640_Set.Donus_Pozisyonu" PLCWriteAdress="JD640_Set.Donus_Pozisyonu" Ust_Limit="200" DataType="Single" Click="degerGir_Baski_Offset_Click" MessageBoxState="True" MessageBoxText="Dikkat!!! &quot;Dönüş Pozisyonu&quot; değerinin set edilebilmesi için makina STOP durumuna getirilecek. Devam etmek istiyor musunuz?" MessgeBoxWorkMode="2" MessgeBoxRunStatus="True" Keypad="True" Aciklama="Dönüş Pozisyonu (mm)"/>
+            <TextBlock HorizontalAlignment="Left" Margin="684,213,0,0" TextWrapping="Wrap" Text="DÖNÜŞ POZİSYONU (mm)" VerticalAlignment="Top" Height="54" Width="238" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+            <local:DegerGir HorizontalAlignment="Left" Height="52" Margin="197,112,0,0" VerticalAlignment="Top" Width="222" PLCReadAdress="JD640_Set.Baskı_Hızı" PLCWriteAdress="JD640_Set.Baskı_Hızı" Ust_Limit="80" DataType="Single" Click="degerGir_Baski_Offset_Click" MessageBoxState="True" MessageBoxText="Dikkat!!! &quot;Baskı Hızı&quot; değerinin set edilebilmesi için makina STOP durumuna getirilecek. Devam etmek istiyor musunuz?" MessgeBoxWorkMode="2" MessgeBoxRunStatus="True" Keypad="True" Aciklama="Baskı Hızı (mm/s)"/>
+            <TextBlock HorizontalAlignment="Left" Margin="229,36,0,0" TextWrapping="Wrap" Text="BASKI HIZI (mm/s)" VerticalAlignment="Top" Height="54" Width="156" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+            <local:DegerGir HorizontalAlignment="Left" Height="52" Margin="197,289,0,0" VerticalAlignment="Top" Width="222" PLCReadAdress="JD640_Set.Donus_Hızı" PLCWriteAdress="JD640_Set.Donus_Hızı" Ust_Limit="80" DataType="Single" Click="degerGir_Baski_Offset_Click" MessageBoxText="Dikkat!!! &quot;Dönüş Hızı&quot; değerinin set edilebilmesi için makina STOP durumuna getirilecek. Devam etmek istiyor musunuz?" MessgeBoxWorkMode="2" MessgeBoxRunStatus="True" Keypad="True" MessageBoxState="True" Aciklama="Dönüş Hızı (mm/s)"/>
+            <TextBlock HorizontalAlignment="Left" Margin="229,213,0,0" TextWrapping="Wrap" Text="DÖNÜŞ HIZI (mm/s)" VerticalAlignment="Top" Height="54" Width="158" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        </Grid>
+        <Grid Background="#FF7A7979"  Margin="86,129,894,533">
+            <TextBlock HorizontalAlignment="Left" Margin="0,28,0,0" TextWrapping="Wrap" Text="Baskı Süresi (s)" VerticalAlignment="Top" Height="30" Width="300" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+            <local:DegerGir_Digital x:Name="DegerGir_Digital_Baski_Suresi" Height="114" Margin="53,86,53,0" VerticalAlignment="Top" Width="Auto" TextSize="80" Text="0" Ust_Limit="180" Kazanc="1000" PLCReadAdress="STATUS.Baski_Suresi_Kalan" PLCWriteAdress="" DataType="UInt32" TypeCode="UInt32" MouseUp="DegerGir_Digital_Baski_Suresi_MouseUp">
+                <local:DegerGir_Digital.Value>
+                    <System:Int32>0</System:Int32>
+                </local:DegerGir_Digital.Value>
+
+
+            </local:DegerGir_Digital>
+            <local:DegerGir_Text x:Name="DegerGir_Text_Baski_Suresi" HorizontalAlignment="Left" Height="21" Margin="53,92,0,0" VerticalAlignment="Top" Width="48" TextSize="21" Text="100" Kazanc="1000" PLCReadAdress="JD640_Set.Baskı_Suresi" PLCWriteAdress="JD640_Set.Baskı_Suresi" Keypad="True" MessgeBoxWorkMode="2" MessageBoxText="Dikkat!!! &quot;Baskı Süresi&quot; değerinin set edilebilmesi için makina STOP durumuna getirilecek. Devam etmek istiyor musunuz?" Ust_Limit="180" TypeCode="Int32" DataType="UInt32" Recete="True" PozitifToleransAdi="Basma_Suresi_PTol" NegatifToleransAdi="Basma_Suresi_NTol" ParametreAdi="Basma_Suresi"/>
+        </Grid>
+        <Grid Background="#FF7A7979"  Margin="896,129,84,533">
+            <local:DegerGir_Digital x:Name="txt_Baski_Sayisi" Height="Auto" Margin="53,86,53,72" Width="Auto" TextSize="80" Text="0" Kazanc="1" PLCReadAdress="Retain_Data.Baski_Sayisi" MouseDown="txt_Baski_Sayisi_MouseDown" MouseUp="txt_Baski_Sayisi_MouseUp" MouseLeave="txt_Baski_Sayisi_MouseLeave"  PLCWriteAdress="Retain_Data.Baski_Sayisi">
+                <local:DegerGir_Digital.Value>
+                    <System:Int32>0</System:Int32>
+                </local:DegerGir_Digital.Value>
+            </local:DegerGir_Digital>
+            <TextBlock HorizontalAlignment="Left" Margin="0,28,0,0" TextWrapping="Wrap" Text="Baskı Sayısı" VerticalAlignment="Top" Height="30" Width="300" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        </Grid>
+
+
+    </Grid>
+</Page>

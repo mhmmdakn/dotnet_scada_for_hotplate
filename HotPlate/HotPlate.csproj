@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7CD7A448-19C1-41B5-A81D-311C92F00274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HotPlate</RootNamespace>
+    <AssemblyName>HotPlate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyModbus">
+      <HintPath>..\Hot_Plate_Lib\EasyModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AlarmList.xaml.cs">
+      <DependentUpon>AlarmList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ayarlar.xaml.cs">
+      <DependentUpon>Ayarlar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CikisUnitesi.xaml.cs">
+      <DependentUpon>CikisUnitesi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="GirisUnitesi.xaml.cs">
+      <DependentUpon>GirisUnitesi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="INTRO.xaml.cs">
+      <DependentUpon>INTRO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciAyarlari.xaml.cs">
+      <DependentUpon>KullaniciAyarlari.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReceteJSON.cs" />
+    <Compile Include="RecetePage.xaml.cs">
+      <DependentUpon>RecetePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Servo.xaml.cs">
+      <DependentUpon>Servo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnAlarmReset.xaml.cs">
+      <DependentUpon>BtnAlarmReset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnCarpi.xaml.cs">
+      <DependentUpon>BtnCarpi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnDonusYonu.xaml.cs">
+      <DependentUpon>BtnDonusYonu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnEkle.xaml.cs">
+      <DependentUpon>BtnEkle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnGuncelle.xaml.cs">
+      <DependentUpon>BtnGuncelle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnAwesome.xaml.cs">
+      <DependentUpon>BtnAwesome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnIptal.xaml.cs">
+      <DependentUpon>BtnIptal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnKalici _D.xaml.cs">
+      <DependentUpon>BtnKalici _D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnKalici _M.xaml.cs">
+      <DependentUpon>BtnKalici _M.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnKaydet.xaml.cs">
+      <DependentUpon>BtnKaydet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnKalici.xaml.cs">
+      <DependentUpon>BtnKalici.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnStart.xaml.cs">
+      <DependentUpon>BtnStart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnTik.xaml.cs">
+      <DependentUpon>BtnTik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DegerGir_Text.xaml.cs">
+      <DependentUpon>DegerGir_Text.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DegerOku.xaml.cs">
+      <DependentUpon>DegerOku.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DegerGir_Digital.xaml.cs">
+      <DependentUpon>DegerGir_Digital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Error_List_Item.xaml.cs">
+      <DependentUpon>Error_List_Item.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HotPlateState.xaml.cs">
+      <DependentUpon>HotPlateState.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RezistansPage.xaml.cs">
+      <DependentUpon>RezistansPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnAfterPage.xaml.cs">
+      <DependentUpon>BtnAfterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnBeforePage.xaml.cs">
+      <DependentUpon>BtnBeforePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plate.xaml.cs">
+      <DependentUpon>Plate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPage.xaml.cs">
+      <DependentUpon>ManualPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NumericKeypad.xaml.cs">
+      <DependentUpon>NumericKeypad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnHome.xaml.cs">
+      <DependentUpon>BtnHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnImages.xaml.cs">
+      <DependentUpon>BtnImages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnPush.xaml.cs">
+      <DependentUpon>BtnPush.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BtnYon.xaml.cs">
+      <DependentUpon>BtnYon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoadingGif.xaml.cs">
+      <DependentUpon>LoadingGif.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Module.xaml.cs">
+      <DependentUpon>Module.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DegerGir.xaml.cs">
+      <DependentUpon>DegerGir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Numarator_Flex.xaml.cs">
+      <DependentUpon>Numarator_Flex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Numarator.xaml.cs">
+      <DependentUpon>Numarator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReceteModule.xaml.cs">
+      <DependentUpon>ReceteModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Resistance.xaml.cs">
+      <DependentUpon>Resistance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SecimKaydirma.xaml.cs">
+      <DependentUpon>SecimKaydirma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Servo_Error_List.xaml.cs">
+      <DependentUpon>Servo_Error_List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateGif_I.xaml.cs">
+      <DependentUpon>StateGif_I.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateGif.xaml.cs">
+      <DependentUpon>StateGif.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateImage.xaml.cs">
+      <DependentUpon>StateImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateLed_Multiple.xaml.cs">
+      <DependentUpon>StateLed_Multiple.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateLed_I.xaml.cs">
+      <DependentUpon>StateLed_I.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateLed.xaml.cs">
+      <DependentUpon>StateLed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateOk2.xaml.cs">
+      <DependentUpon>StateOk2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateOkxaml.xaml.cs">
+      <DependentUpon>StateOkxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StateServo.xaml.cs">
+      <DependentUpon>StateServo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\State_Awasome.xaml.cs">
+      <DependentUpon>State_Awasome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\State_Block.xaml.cs">
+      <DependentUpon>State_Block.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\State_Gif_Media.xaml.cs">
+      <DependentUpon>State_Gif_Media.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TablaRes.xaml.cs">
+      <DependentUpon>TablaRes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TablRes_Dyn.xaml.cs">
+      <DependentUpon>TablRes_Dyn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AlarmList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ayarlar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CikisUnitesi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GirisUnitesi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="INTRO.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KullaniciAyarlari.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RecetePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Servo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnAlarmReset.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnCarpi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnDonusYonu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnEkle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnGuncelle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnAwesome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BtnIptal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnKalici _D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BtnKalici _M.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BtnKaydet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnKalici.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\BtnStart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnTik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\DegerGir_Text.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DegerOku.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DegerGir_Digital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Error_List_Item.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HotPlateState.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RezistansPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnAfterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnBeforePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManualPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NumericKeypad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnPush.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BtnYon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoadingGif.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Module.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\DegerGir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Numarator_Flex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Numarator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ReceteModule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Resistance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SecimKaydirma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Servo_Error_List.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StateGif_I.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StateGif.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StateImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StateLed_Multiple.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StateLed_I.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StateLed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StateOk2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StateOkxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StateServo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\State_Awasome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\State_Block.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\State_Gif_Media.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TablaRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TablRes_Dyn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Alarm.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="AnaUnite.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Cikis.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Giris.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Recete.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\auto_working.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\manuel_working.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Hot_Plate_Full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\kesme_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\kesme_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\HotPlate-Kalip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\HotPlate-Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hot_Plate_Lib\Hot_Plate_Lib.csproj">
+      <Project>{4ee9d996-e980-425f-9757-e5508d3c2d4c}</Project>
+      <Name>Hot_Plate_Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnScreenKeyboard\OnScreenKeyboard.csproj">
+      <Project>{9769a070-b7dc-4289-ae71-f810d84660cf}</Project>
+      <Name>OnScreenKeyboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQL_Lib\SQL_Lib.csproj">
+      <Project>{ce0e2e99-61b5-490f-bf7d-f018a05601f6}</Project>
+      <Name>SQL_Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="img\Loading.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Tik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Carpi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\GirisUnitesi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\CikisUnitesi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\LineerCetvel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\CikisUnitesi3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\GirisUnitesi3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\HotPlateFull3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Alarm_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\martur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\emergency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\AlarmIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="siren.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="siren1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="siren2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\HotPlate-Basma.png" />
+    <Resource Include="img\HotPlate-Donus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="img\menzel_secimi1.png" />
+    <Resource Include="img\menzel_secimi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

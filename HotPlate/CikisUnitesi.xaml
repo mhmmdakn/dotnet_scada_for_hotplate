@@ -1,0 +1,298 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotPlate"
+      xmlns:UserControls="clr-namespace:HotPlate.UserControls" x:Class="HotPlate.CikisUnitesi"
+      mc:Ignorable="d" 
+      d:DesignHeight="934" d:DesignWidth="1280"
+      Title="CikisUnitesi" Background="#FF343131" Loaded="Page_Loaded">
+
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="1227*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                <SkewTransform AngleY="0" AngleX="0"/>
+                <RotateTransform Angle="0"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Rectangle Fill="#FFA9A9AC" StrokeThickness="0" HorizontalAlignment="Left" Height="222" Margin="77,532,0,0" Stroke="Black" VerticalAlignment="Top" Width="944" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-41" AngleY="4"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Image Margin="41,95,144,169"  RenderTransformOrigin="0.5,0.5" Source="img/CikisUnitesi3D.png" Stretch="Fill" Grid.Column="1"/>
+
+        <local:StateLed HorizontalAlignment="Left" Height="24" Margin="642,418,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Loop_Ust_Limit" PLCStationName="Cikis" FalseColor="#FF815656" TrueColor="Red" Grid.Column="1">
+            <local:StateLed.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="2"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:StateLed.RenderTransform>
+        </local:StateLed>
+        <local:StateLed HorizontalAlignment="Left" Height="25" Margin="642,562,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Loop_Alt_Limit" PLCStationName="Cikis" FalseColor="#FF815656" TrueColor="Red" Grid.Column="1">
+            <local:StateLed.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="2"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:StateLed.RenderTransform>
+        </local:StateLed>
+
+        <UserControls:BtnDonusYonu HorizontalAlignment="Left" Height="70" Margin="944,208,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Menzel_FW" PLCStationName="Cikis" Grid.Column="1">
+            <UserControls:BtnDonusYonu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="3"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:BtnDonusYonu.RenderTransform>
+        </UserControls:BtnDonusYonu>
+        <UserControls:BtnDonusYonu HorizontalAlignment="Left" Height="70" Margin="858,200,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Menzel_RV" PLCStationName="Cikis" Grid.Column="1">
+            <UserControls:BtnDonusYonu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="3" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:BtnDonusYonu.RenderTransform>
+        </UserControls:BtnDonusYonu>
+        <local:DegerGir x:Name="degerGir_Menzel" HorizontalAlignment="Left" Height="48" Margin="770,416,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" Keypad="True" PLCReadAdress="TM2_Set.Cikis_Menzel" PLCWriteAdress="TM2_Set.Cikis_Menzel" Kazanc="100" Aciklama="Menzer Hızı (Hz)" Click="degerGir_Menzel_Click" Ust_Limit="14" Alt_Limit="10" Grid.Column="1">
+            <local:DegerGir.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="4.273" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-7.373"/>
+                </TransformGroup>
+            </local:DegerGir.RenderTransform>
+        </local:DegerGir>
+        <TextBlock HorizontalAlignment="Left" Margin="769,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="43" Text="Menzer Hızı (Hz)" FontSize="15" FontWeight="Bold" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="4.112" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-6.881"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <local:BtnBeforePage HorizontalAlignment="Left" Height="50" Margin="1158,438,0,0" VerticalAlignment="Top" Width="30" MouseUp="BtnBeforePage_MouseUp" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <local:BtnBeforePage.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:BtnBeforePage.RenderTransform>
+            <local:BtnBeforePage.Effect>
+                <DropShadowEffect/>
+            </local:BtnBeforePage.Effect>
+        </local:BtnBeforePage>
+        <TextBlock HorizontalAlignment="Left" Margin="1153,493,0,0" TextWrapping="Wrap" Text="Giriş Ünitesi" VerticalAlignment="Top" TextAlignment="Center" Width="40" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="698,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="38" Text="Sol Kesme" FontSize="15" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="White" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="2.027" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-2.18"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="593,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="38" Text="Sağ Kesme" FontSize="15" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="White" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="2.921" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-2.664"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="882,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="24" FontSize="15" FontWeight="Bold" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="2.216" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-5.284"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="Menzer Mo"/><Run Text="toru"/></TextBlock>
+        <TextBlock Margin="327,26,381,0" TextWrapping="Wrap" Text="ÇIKIŞ ÜNİTESİ" VerticalAlignment="Top" Foreground="White" FontSize="30" FontWeight="Bold" TextDecorations="{x:Null}" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <UserControls:BtnImages HorizontalAlignment="Left" Height="53" Margin="593,342,0,0" VerticalAlignment="Top" Width="56" PLCReadAdress="Data_Cikis.Scm_Sag_Kesici" RenderTransformOrigin="0.5,0.5" PLCStationName="Cikis" PLCWriteAdress="Data_Cikis.Scm_Sag_Kesici" State="False" Grid.Column="1" DataType="Boolean">
+            <UserControls:BtnImages.Image2>
+                <Image Source="img/kesme_green.png"/>
+            </UserControls:BtnImages.Image2>
+            <UserControls:BtnImages.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="2.961"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.448"/>
+                </TransformGroup>
+            </UserControls:BtnImages.RenderTransform>
+            <UserControls:BtnImages.Image1>
+                <Image Source="img/kesme_red.png" Stretch="Fill"/>
+            </UserControls:BtnImages.Image1>
+        </UserControls:BtnImages>
+        <UserControls:BtnImages State="False" HorizontalAlignment="Left" Height="48" Margin="699,218,0,0" VerticalAlignment="Top" Width="52" PLCReadAdress="Data_Cikis.Scm_Sol_Kesici" RenderTransformOrigin="3.019,1.313" PLCStationName="Cikis" Grid.Column="1" PLCWriteAdress="Data_Cikis.Scm_Sol_Kesici" DataType="Boolean">
+            <UserControls:BtnImages.Image2>
+                <Image Source="img/kesme_green.png"/>
+            </UserControls:BtnImages.Image2>
+            <UserControls:BtnImages.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="2.961"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="5.326"/>
+                </TransformGroup>
+            </UserControls:BtnImages.RenderTransform>
+            <UserControls:BtnImages.Image1>
+                <Image Source="img/kesme_red.png" Stretch="Fill"/>
+            </UserControls:BtnImages.Image1>
+        </UserControls:BtnImages>
+        <local:DegerGir HorizontalAlignment="Left" Height="48" Margin="388,296,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Data_Cikis.Kum_Cek_Cal_Velocity" PLCWriteAdress="Data_Cikis.Kum_Cek_Cal_Velocity" PLCStationName="Cikis" Keypad="True" DataType="Single" Aciklama="Kumaş Çekme Hızı (cm/s)" Ust_Limit="50" Kazanc="10" Grid.Column="1">
+            <local:DegerGir.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="4.273" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-7.373"/>
+                </TransformGroup>
+            </local:DegerGir.RenderTransform>
+        </local:DegerGir>
+        <TextBlock HorizontalAlignment="Left" Margin="389,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="41" Text="Kumaş Çekme Hızı (cm/s)" FontSize="15" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="White" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1.002"/>
+                    <SkewTransform AngleY="4.278" AngleX="1"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="-0.129" Y="-7.388"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <local:DegerGir HorizontalAlignment="Left" Height="48" Margin="260,286,0,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Data_Cikis.Kum_Cek_Cal_mm" PLCWriteAdress="Data_Cikis.Kum_Cek_Cal_mm" PLCStationName="Cikis" Keypad="True" Aciklama="Kumaş Çekme Uzunluğu (cm)" DataType="Single" Ust_Limit="113" Kazanc="10" Grid.Column="1">
+            <local:DegerGir.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="3.676" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform Y="-7.782"/>
+                </TransformGroup>
+            </local:DegerGir.RenderTransform>
+        </local:DegerGir>
+        <TextBlock HorizontalAlignment="Left" Margin="262,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="40" Text="Kumaş Çekme Uzunluğu (cm)" FontSize="15" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="White" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1.002"/>
+                    <SkewTransform AngleY="3.454" AngleX="1"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="-0.114" Y="-6.547"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <UserControls:BtnDonusYonu HorizontalAlignment="Left" Height="70" Margin="400,555,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="0.5,0.5" PLCReadAdress="Status.Servo_Dir_FW" PLCStationName="Cikis" Grid.Column="1">
+            <UserControls:BtnDonusYonu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1" AngleY="5"/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:BtnDonusYonu.RenderTransform>
+        </UserControls:BtnDonusYonu>
+        <UserControls:BtnDonusYonu HorizontalAlignment="Left" Height="70" Margin="324,550,0,0" VerticalAlignment="Top" Width="70" RenderTransformOrigin="1.161,1.943" PLCReadAdress="Status.Servo_Dir_RV" PLCWriteAdress="" PLCStationName="Cikis" Grid.Column="1">
+            <UserControls:BtnDonusYonu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="5" AngleX="-1"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="-94.303" Y="-4.045"/>
+                </TransformGroup>
+            </UserControls:BtnDonusYonu.RenderTransform>
+        </UserControls:BtnDonusYonu>
+        <TextBlock HorizontalAlignment="Left" Margin="176,564,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="40" Text="Kumaş Çekme Servo" FontSize="15" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Foreground="Black" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1.002"/>
+                    <SkewTransform AngleY="4.387" AngleX="1"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="-0.131" Y="-7.5"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <UserControls:BtnImages State="False" HorizontalAlignment="Left" Height="131" Margin="1063,185,0,0" VerticalAlignment="Top" Width="106" PLCReadAdress="Data_Cikis.Scm_Menzel_Yon" RenderTransformOrigin="3.019,1.313" PLCStationName="Cikis" Grid.Column="1" PLCWriteAdress="Data_Cikis.Scm_Menzel_Yon" DataType="Boolean">
+            <UserControls:BtnImages.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </UserControls:BtnImages.Background>
+            <UserControls:BtnImages.Image2>
+                <Image Source="img/menzel_secimi2.png"/>
+            </UserControls:BtnImages.Image2>
+            <UserControls:BtnImages.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.249"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-6.562"/>
+                </TransformGroup>
+            </UserControls:BtnImages.RenderTransform>
+            <UserControls:BtnImages.Image1>
+                <Image Source="img/menzel_secimi1.png" Stretch="Fill"/>
+            </UserControls:BtnImages.Image1>
+        </UserControls:BtnImages>
+        <TextBlock HorizontalAlignment="Left" Margin="1063,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" Height="43" Text="Menzer Yönü" FontSize="15" FontWeight="Bold" TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+
+    </Grid>
+</Page>

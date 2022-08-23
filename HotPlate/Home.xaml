@@ -1,0 +1,97 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotPlate"
+      xmlns:UserControls="clr-namespace:HotPlate.UserControls" xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:fa="http://schemas.fontawesome.io/icons/" x:Class="HotPlate.Home"
+      mc:Ignorable="d" 
+      d:DesignHeight="934" d:DesignWidth="1280"
+      Title="Home" Background="#FF343131" Loaded="Page_Loaded">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Margin="83,571,0,0" Stroke="Black" Width="1110" Height="292" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.30"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Height="227" Margin="83,317,0,0" Stroke="Black" VerticalAlignment="Top" Width="1110">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.35"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle HorizontalAlignment="Left" Height="227" Margin="83,68,0,0" Stroke="Black" VerticalAlignment="Top" Width="1110">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White" Opacity="0.4"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="684,115,0,0" TextWrapping="Wrap" Text="LİNEER CETVEL 1" VerticalAlignment="Top" Height="34" Width="174" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="684,225,0,0" TextWrapping="Wrap" Text="HOME OFFSET 1" VerticalAlignment="Top" Height="32" Width="174" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <!--<local:StateImage HorizontalAlignment="Left" Height="100" Margin="192,662,0,0" VerticalAlignment="Top" Width="100" PLCReadAdress="" PLCWriteAdress="Home_Yap">
+            <local:StateImage.Image2>
+                <Image Source="img/Carpi.png"/>
+            </local:StateImage.Image2>
+            <local:StateImage.Image1>
+                <Image Source="img/Tik.png"/>
+            </local:StateImage.Image1>
+        </local:StateImage>-->
+        <!--<UserControls:LoadingGif x:Name="gif_loading" Visibility="Hidden" HorizontalAlignment="Left" Height="100" Margin="191,662,0,0" VerticalAlignment="Top" Width="100"/>-->
+        <UserControls:BtnStart Height="84" Margin="419,672,419,0" VerticalAlignment="Top" Width="Auto" Text="PRES HOME YAP" FontSizeText="25" PLCReadAdress="Home_Yap" PLCWriteAdress="Home_Yap"/>
+        <UserControls:State_Block TextHeight="77" TextWidth="387" HorizontalAlignment="Left" Height="78" Margin="190,85,0,0" VerticalAlignment="Top" Width="387" MultiState="0" PLCReadAdress="POS1_Home_Status" >
+            <UserControls:State_Block.ListColor>
+                <Color>Red</Color>
+                <Color>Lime</Color>
+            </UserControls:State_Block.ListColor>
+            <UserControls:State_Block.ListText>
+                <System:String>POS1</System:String>
+                <System:String>POS1</System:String>
+            </UserControls:State_Block.ListText>
+        </UserControls:State_Block>
+        <UserControls:State_Block TextHeight="77" TextWidth="387" HorizontalAlignment="Left" Height="78" Margin="190,197,0,0" VerticalAlignment="Top" Width="387" MultiState="0" PLCReadAdress="POS2_Home_Status">
+            <UserControls:State_Block.ListColor>
+                <Color>Red</Color>
+                <Color>Lime</Color>
+            </UserControls:State_Block.ListColor>
+            <UserControls:State_Block.ListText>
+                <System:String>POS2</System:String>
+                <System:String>POS2</System:String>
+            </UserControls:State_Block.ListText>
+        </UserControls:State_Block>
+        <UserControls:State_Block TextHeight="77" TextWidth="387" HorizontalAlignment="Left" Height="78" Margin="190,340,0,0" VerticalAlignment="Top" Width="387" MultiState="0" PLCReadAdress="POS3_Home_Status">
+            <UserControls:State_Block.ListColor>
+                <Color>Red</Color>
+                <Color>Lime</Color>
+            </UserControls:State_Block.ListColor>
+            <UserControls:State_Block.ListText>
+                <System:String>POS3</System:String>
+                <System:String>POS3</System:String>
+            </UserControls:State_Block.ListText>
+        </UserControls:State_Block>
+        <UserControls:State_Block TextHeight="77" TextWidth="387" HorizontalAlignment="Left" Height="78" Margin="190,447,0,0" VerticalAlignment="Top" Width="387" MultiState="0" PLCReadAdress="POS4_Home_Status">
+            <UserControls:State_Block.ListColor>
+                <Color>Red</Color>
+                <Color>Lime</Color>
+            </UserControls:State_Block.ListColor>
+            <UserControls:State_Block.ListText>
+                <System:String>POS4</System:String>
+                <System:String>POS4</System:String>
+            </UserControls:State_Block.ListText>
+        </UserControls:State_Block>
+        <local:DegerGir HorizontalAlignment="Left" Height="49" Margin="882,104,0,0" VerticalAlignment="Top" Width="241" PLCReadAdress="JD640.Lineer_Cetvel1" Kazanc="1" DataType="Single"/>
+        <local:DegerGir HorizontalAlignment="Left" Height="49" Margin="882,217,0,0" VerticalAlignment="Top" Width="241" PLCReadAdress="JD640_Set.Home_Offset_1" Kazanc="13107" DataType="Int32"/>
+        <TextBlock HorizontalAlignment="Left" Margin="684,369,0,0" TextWrapping="Wrap" Text="LİNEER CETVEL 2" VerticalAlignment="Top" Height="34" Width="174" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="684,479,0,0" TextWrapping="Wrap" Text="HOME OFFSET 2" VerticalAlignment="Top" Height="32" Width="174" TextAlignment="Center" FontWeight="Bold" FontSize="20" Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <local:DegerGir HorizontalAlignment="Left" Height="49" Margin="882,358,0,0" VerticalAlignment="Top" Width="241" PLCReadAdress="JD640.Lineer_Cetvel2" Kazanc="1" DataType="Single"/>
+        <local:DegerGir HorizontalAlignment="Left" Height="49" Margin="882,471,0,0" VerticalAlignment="Top" Width="241" PLCReadAdress="JD640_Set.Home_Offset_2" Kazanc="13107" DataType="Int32"/>
+        <UserControls:LoadingGif HorizontalAlignment="Left" Height="68" Margin="584,586,0,0" VerticalAlignment="Top" Width="112" State="True" PLCReadAdress="Home_Yap" RenderTransformOrigin="-2.027,0.784" />
+        <UserControls:State_Awasome HorizontalAlignment="Left" Height="68" Margin="601,774,0,0" VerticalAlignment="Top" Width="78" PLCReadAdress="First_Home_OK" MultiState="0" >
+            <UserControls:State_Awasome.ListImage>
+                <fa:ImageAwesome Icon="Times" Foreground="Red"/>
+                <fa:ImageAwesome Icon="Check" Foreground="Lime"/>
+            </UserControls:State_Awasome.ListImage>
+        </UserControls:State_Awasome>
+
+    </Grid>
+</Page>

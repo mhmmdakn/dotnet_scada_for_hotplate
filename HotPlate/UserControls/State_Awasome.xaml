@@ -1,0 +1,17 @@
+﻿<y:PLC_BaseUserControl x:Class="HotPlate.UserControls.State_Awasome"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:y="clr-namespace:Hot_Plate_Lib;assembly=Hot_Plate_Lib"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotPlate.UserControls"
+             mc:Ignorable="d" Height="245.625" Width="275">
+    <Grid>
+        <fa:ImageAwesome Icon="Check" x:Name="sta_awesome"/>
+
+        
+        <TextBlock x:Name="txt_state" TextWrapping="Wrap" FontSize="14" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,100"/>
+
+    </Grid>
+</y:PLC_BaseUserControl>
